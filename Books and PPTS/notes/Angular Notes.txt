@@ -1,0 +1,217 @@
+Angular Prerequisites
+------------------------
+1. HTML5
+2. CSS / SCSS (bootstrap 4 or 5) -  https://getbootstrap.com/
+3. Java Script Bssics
+4. TypeScript terminology
+
+
+-----------------------------
+bootstrap
+    1. Containers
+    2. Alert
+    3. Grid system
+    4. Card
+    5. Table
+    6. Form
+
+----------------------------
+
+
+
+
+Angular Lab Setup
+-------------------
+1. Install Node.js 8 and above version (https://nodejs.org/en/)
+2. Check instalation of node byu using command node -v
+3. When node is instaled, npm (node package manager) also congfigured
+4. Check npm instalation by using command npm -v
+5. Install Angular CLI using npm install -g @angular/cli with admin privileges
+6. Verify Instalation status of Angular CLI using command ng --version
+
+-------------------------------------------------------------------
+
+Editors
+1. Visual studio code editor (https://code.visualstudio.com/)
+or
+2. Sublime (https://www.sublimetext.com/ )
+
+Databases
+
+1. MySQL
+2. Mongo DB
+-----------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. src/main.ts
+2. /app/app.module.ts
+
+app.module.ts
+----------------------
+Major 3 parts
+1. declarations: All CustomComponents (Component which you have created) should be declared
+2. imports: All built-in and user-defined modules which is going to b used in the app, should be declared
+3.providers:(optional) All Service classes which is enjectable (Dependency Injection) should be declared 
+4.bootstrap: Component sequence executed by angular at the time of starting the server
+
+
+CLI Commands
+---------------------------------
+creating new angular app
+ng new my-app
+adding libraries to the anguklar app
+npm install bootstrap,jquery --save 
+
+
+
+
+Start Server
+ng serve --open or ng serve  or ng s or npm start or yarn start
+Generating new component
+ng generate component greet
+ng generate component product 
+
+
+
+=================================================================
+
+Application Execution Order
+------------------------------
+1. package.json and angular.json
+2. loads main.ts from src folder
+3. loads app-module.ts from src/app folder
+
+    Mandate Sections: 3 sections
+    1. declarations : Any custom component shoulod be registered here
+    2. imports : Any Built in or user defined modules should be registered here
+    3. bootstrap : Invocation order of Components when server is starting  
+
+    4.  providers: [] (optional) : Defining any Dependency  claasses
+4. loads AppComponent class from src/app/app.component.ts
+
+        AppComponent class
+        ---------------------------
+        1. Imports
+        2. Declarations of Decarators (@) like @COmponent,@Module,@Pipe,@Injectable etc...
+        3. Class Defination
+5. loads app.component.html in the place of <app-root></app-root> (index.html)
+
+=======================================================================
+
+Note:
+1. ts file with @Component decarator is called component
+2. html file loaded by a component is called template 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+data binding
+----------------
+3 ways of binding
+
+1. Property binding [ ] : Binging a property from .ts(component file) file to .html(template file) file
+2. Event binding ( )
+3. Two way binding [(ngModel)]
+
+
+3. Two way binding [(ngModel)]
+----------------------------------
+-> by default disbled
+-> to enable 2-way binding, include forms module in the application (app.module.ts)
+-> forms module should be added in the app.module.ts (in imports section) file in the app folder
+
+
+Angular Drectices
+----------------------
+1. Structural directives
+2. Attribute directives
+
+
+
+ 1. Structural directives
+-----------------------------
+a. *ngIf
+b. *ngFor
+c. *ngSwitch
+
+
+a. *ngIf
+----------
+i) true or false
+ii) 1 or zero (1 means true)
+iii) null or not null (null means false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pipes: formating template date : 2 types
+1. Built in pipes
+2. User defined pipes
+
+
+1. Built in pipes
+-------------------
+
+a. date
+    date, shortDate, fullDate, custom-formating
+
+    
+
+
+
+
+
+
+
