@@ -1,0 +1,70 @@
+<div class="container">
+  <h1>Directives</h1>
+  <hr />
+
+  <div>
+    <u>Directives</u>
+    <ol>
+      <li>
+        Structural Directives
+        <ul>
+          <li>*ngIf</li>
+          <li>*ngFor</li>
+          <li>*ngSwitch</li>
+        </ul>
+      </li>
+      <li>
+        Attribute directives
+        <ul>
+          <li>ngClass etc..</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <hr />
+
+  Show: <input type="checkbox" [(ngModel)]=status>
+  <div *ngIf=status>
+    <h1>Hello Angular</h1>
+  </div>
+
+  <hr />
+
+  <div *ngFor="let city of cities">
+    <li>{{city}}</li>
+  </div>
+
+  <hr />
+
+  <table class="table table-hover">
+
+
+    <thead>
+      <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.id}}</td>
+        <td>{{ emp.name}}</td>
+        <td>{{ emp.salary}}</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+
+
+
+
+
+
+</div>

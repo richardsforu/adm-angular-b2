@@ -1,0 +1,82 @@
+<div class="container">
+
+  <h1>Components</h1>
+  <hr />
+
+  <div [hidden]=status>
+    <h2>Hello Angular</h2>
+  </div>
+
+
+  <div>
+    <select name="p1" #p1 (change)="changePosition(p1.value)">
+      <option>--- Select Position --- </option>
+      <option>Left</option>
+      <option>Right</option>
+      <option>Center</option>
+    </select>
+  </div>
+
+
+
+
+  <div [align]=imageAlignment>
+    <img [src]=imageUrl />
+  </div>
+
+
+  <hr />
+
+
+  <button (click)=b1Click()>B1</button>
+  <br />
+  <button [style]=btnBgColor (mouseenter)=b2Click() (mouseout)=b2ClickV1()>B2</button>
+  <hr />
+
+  <input type="text" #s1 (keyup)="handleChange(s1.value)" />
+  <br />
+  <h2> {{messageText}}</h2>
+
+  <hr />
+
+  <input type="text" name="t1" [(ngModel)]="messageText2" />
+  <h2> {{messageText2}}</h2>
+
+  <hr />
+
+  <div class="col-4">
+
+
+    <form (submit)="handleSubmit()">
+      <div class="form-group">
+        <label>ID</label>
+        <input type="text" class="form-control" name="product.id" [(ngModel)]="product.id" />
+      </div>
+      <div>
+        <label>Name</label>
+        <input type="text" class="form-control" name="product.name" [(ngModel)]="product.name" />
+      </div>
+      <div>
+        <label>Price</label>
+        <input type="text" class="form-control" name="product.price" [(ngModel)]="product.price" />
+      </div>
+
+      <div>
+        <label>Description</label>
+        <input type="text" class="form-control" name="product.description" [(ngModel)]="product.description" />
+      </div>
+
+      <div class="form-group">
+        <button>Save</button>
+      </div>
+    </form>
+
+  </div>
+
+  <hr />
+
+  <h3>
+    {{product | json}}
+  </h3>
+
+</div>
