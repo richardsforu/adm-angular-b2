@@ -1,0 +1,27 @@
+<div class="container">
+
+  <div class="alert alert-primary text-center">
+    <h1>Parent-Child</h1>
+  </div>
+  <hr />
+
+
+  <div class="card">
+    <div class="card-header bg-info">APP Component</div>
+    <div class="card-body">
+        <h2>APP Component</h2> <hr/>
+        <button (click)="sendGreeting('Good Morning')" class="btn btn-primary btn-space">Good Morning</button>
+        <button (click)="sendGreeting('Good Noon')" class="btn btn-primary btn-space">Good Noon</button>
+        <button (click)="sendGreeting('Good Evening')" class="btn btn-primary btn-space">Good Evening</button>
+
+    </div>
+  </div>
+
+<!-- <app-greet [emp]="emp" message="Welcome to Angular!" name="Praveen" [n1]="500" [n2]="800"></app-greet> -->
+
+
+
+
+<app-greet [message]=message> </app-greet>
+
+</div>
