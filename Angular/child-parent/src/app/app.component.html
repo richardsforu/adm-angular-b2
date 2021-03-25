@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="alert alert-info text-center">
+    <h1>Two Way Communication</h1>
+  </div>
+  <hr />
+
+  <div class="card">
+    <div class="card-header"><h3>Counter App</h3></div>
+    <div class="card-body">
+      <div class="row">
+        <div *ngFor="let btn of buttons" class="col-12 col-md-3 col-lg-3 col-xl-2  mt-2">
+         
+          <app-button [btnLable]="btn" (hitBack)="totalBtnHitsCount($event)"></app-button>
+       
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-center">
+      <app-sunmmary [totalbtnHitsCount]=totalbtnHitsCount ></app-sunmmary>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<div class="col-5">
+    <form [formGroup]="productForm" (ngSubmit)="handleSubmit()">
+        <div class="form-group">
+            <label for="">Product ID</label>
+            <input type="text" name="productId" formControlName="productId" class="form-control" />
+            <span *ngIf="isSubmited && fc.productId.errors?.required" class="text-danger">Product ID is Required</span>
+        </div>
+
+        <div class="form-group">
+            <label for="">Product Name</label>
+            <input type="text" name="productName" formControlName="productName" class="form-control" />
+            <span *ngIf="isSubmited && fc.productName.errors?.required" class="text-danger">Product Name is Required</span>
+
+        </div>
+
+        <div class="form-group">
+            <label for="">Price</label>
+            <input type="text" name="price" formControlName="price" class="form-control" />
+            <span *ngIf="isSubmited && fc.price.errors?.required" class="text-danger">Price is Required</span>
+
+        </div>
+
+        <div class="form-group">
+            <label for="">Description</label>
+           <textarea class="form-control" name="description" formControlName="description"></textarea>
+           <span *ngIf="isSubmited && fc.description.errors?.required" class="text-danger">Description Required</span>
+
+        </div>
+
+        <div class="form-group mt-2 text-center">
+            <button class="btn btn-primary">Save</button>
+        </div>
+       
+
+
+    </form>
+</div>
