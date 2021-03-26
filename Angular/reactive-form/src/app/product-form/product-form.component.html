@@ -1,9 +1,12 @@
+
 <div class="col-5">
     <form [formGroup]="productForm" (ngSubmit)="handleSubmit()">
         <div class="form-group">
             <label for="">Product ID</label>
             <input type="text" name="productId" formControlName="productId" class="form-control" />
             <span *ngIf="isSubmited && fc.productId.errors?.required" class="text-danger">Product ID is Required</span>
+            <span *ngIf="isSubmited && fc.productId.errors?.minlength" class="text-danger">Product ID should be at least 3 characters long</span>
+
         </div>
 
         <div class="form-group">
@@ -17,6 +20,15 @@
             <label for="">Price</label>
             <input type="text" name="price" formControlName="price" class="form-control" />
             <span *ngIf="isSubmited && fc.price.errors?.required" class="text-danger">Price is Required</span>
+            <span *ngIf="isSubmited && fc.price.errors?.pattern" class="text-danger">Invalid Price</span>
+
+        </div>
+
+        <div class="form-group">
+            <label for="">Inventory Date</label>
+            <input type="text" name="inventoryDate" formControlName="inventoryDate" class="form-control" />
+            <span *ngIf="isSubmited && fc.inventoryDate.errors?.required" class="text-danger">InventoryDate is Required</span>
+            <span *ngIf="isSubmited && fc.inventoryDate.errors?.invalidDate" class="text-danger">Invalid Date</span>
 
         </div>
 
